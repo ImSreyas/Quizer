@@ -35,8 +35,8 @@
             width: 100%;
             text-align: center;
             padding-block-end: 1rem;
-            font-size: 1.6rem;
-            font-weight: 600;
+            font-size: 1.5rem;
+            font-weight: 500;
         }
         .main-wrapper{
             position: relative;
@@ -58,7 +58,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
             min-height: 30rem;
-            padding-block-end: 6.2rem;
+            padding-block-end: 6.6rem;
         }
 
         .wrapper {
@@ -97,13 +97,15 @@
 
         .tool {
             display: grid;
-            width: calc(100% - 6rem);
+            width: 100%;
             grid-template-columns: 1fr 2fr .5fr 1fr;
             gap: 1rem;
-            padding: 2rem 0;
+            padding: 2rem 3rem;
             position: fixed;
             bottom: 0;
+            left: 0;
             background-color: black;
+            border-block-start: 1px solid rgb(50, 50, 50);
         }
 
         .tool button {
@@ -151,11 +153,34 @@
                 transform: rotate(360deg);
             }
         }
+        @media (width < 1100px){
+            .main{
+                grid-template-columns: 1fr;
+            }
+            .tool{
+                grid-template-columns: .5fr .8fr .5fr 2fr;
+            }
+        }
+        @media (width < 750px){
+            body{
+                padding-inline: 1.5rem;
+            }
+            .main{
+                padding-block-end: 10.2rem;
+                min-height: 26rem;
+            }
+            .tool{
+                padding: 1.4rem 1.5rem;
+                grid-template-columns: 1fr 2fr;
+                width: calc(100%);
+                left: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="head">QUIZ TIME</div>
+    <div class="head">Quiz Time ✨</div>
     <div class="main-wrapper">
         <div class="loader-wrapper" show="false">
             <span class="loader"></span>
