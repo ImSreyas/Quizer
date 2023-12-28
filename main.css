@@ -92,6 +92,7 @@ body {
 .opt-container[selected="true"][ans="yes"]{
     background-color: green;
     border-color: transparent !important;
+    color: white !important;
 }
 .opt-container[ans="yes"] {
     border-color: green;
