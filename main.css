@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+    color: white;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    padding: 2rem 3rem;
+    margin: 0;
+    background-color: black;
+}
+
+.head {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-block-end: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.main-wrapper{
+    position: relative;
+}
+.loader-wrapper{
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loader-wrapper[show="false"]{
+    display: none;
+}
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    min-height: 30rem;
+    padding-block-end: 6.6rem;
+}
+
+.wrapper {
+    border: 1px solid rgb(47, 47, 47);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.opt-wrapper {
+    margin-block-start: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .8rem;
+}
+
+.opt-container {
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    background-color: rgb(21, 21, 21);
+    cursor: pointer;
+    font-size: .9rem;
+    border: 1px solid rgb(39, 39, 39);
+}
+
+.opt-container[selected=true] {
+    background-color: rgb(40, 155, 40);
+}
+
+.opt-container[ans="yes"] {
+    border-color: green;
+}
+
+.opt-container[ans="no"] {
+    border-color: red;
+}
+
+.tool {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr .5fr 1fr;
+    gap: 1rem;
+    padding: 2rem 3rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    border-block-start: 1px solid rgb(50, 50, 50);
+}
+
+.tool button {
+    background-color: black;
+    border: 2px solid rgb(39, 39, 39);
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    font-size: .95rem;
+    transition: all 250ms ease-in-out;
+}
+.tool button:hover{
+    transform: scale(1.03);
+}
+
+.tool .final {
+    padding: 1rem 2rem;
+    border: 2px solid rgb(39, 39, 39);
+    border-radius: .8rem;
+    text-align: center;
+}
+
+.tool button:active {
+    background-color: rgb(21, 21, 21);
+}
+
+/*loading screen */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media (width < 1100px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+    .tool{
+        grid-template-columns: .5fr .8fr .5fr 2fr;
+    }
+}
+@media (width < 750px){
+    body{
+        padding-inline: 1.5rem;
+    }
+    .main{
+        padding-block-end: 10.2rem;
+        min-height: 26rem;
+    }
+    .tool{
+        padding: 1.4rem 1.5rem;
+        grid-template-columns: 1fr 2fr;
+        width: calc(100%);
+        left: 0;
+    }
+}
