@@ -1,6 +1,11 @@
+const main = document.querySelector(".main") // Selecting the main container.
+const newQuest = document.querySelector(".new") // Selecting the new question button.
+const clearBtn = document.querySelector(".clear") // Selecting the clear button.
 // Function for FETCHING the data.
 const getData = async () => {
-
+    main.setAttribute("interact", "true"); // Adding the main container interactivity back when new questions fetched.
+    newQuest.setAttribute("highlight", "false") // Removing the highligh on the new question button when new questions fetched.
+    clearBtn.setAttribute("highlight", "false") // Removing the highligh on the clear button when new questions fetched.
     // Function to remove all event listeners of an element.
     function removeAllEventListeners(element) {
         const clone = element.cloneNode(true);
@@ -28,7 +33,6 @@ getData() // initial calling of getData.
 
 // Function for adding question to the DOM.
 const create = (result) => {
-    const main = document.querySelector(".main") // Selecting the main container.
     // Looping through each of the QUESTIONS.
     result.forEach((res, index) => {
         const wrapper = document.createElement("div")
@@ -51,6 +55,7 @@ const create = (result) => {
             optionContainer.innerHTML = opt
             optionContainer.setAttribute("selected", false)
             optionContainer.addEventListener("click", (e) => {
+                e.target.setAttribute("ans", "false")
                 const status = optionContainer.getAttribute("selected")
                 optionContainer.setAttribute("selected", status == "false") // toggle between SELECT and UNSELECT
 
@@ -86,9 +91,16 @@ const create = (result) => {
         })
         // setting FINAL SCORE
         document.querySelector(".final").innerText = `${score}/10`
+        document.querySelector(".result-container").setAttribute("show", "true");
+        main.setAttribute("interact", "false"); // making main container non interactable when it is submitted.
+        newQuest.setAttribute("highlight", "true") // Highlighting the new question button when the container is non interactable.
+        clearBtn.setAttribute("highlight", "true") // Highlighting the clear button when the container is non interactable.
     })
     // adding event listener for the CLEAR button
     document.querySelector(".clear").addEventListener("click", () => {
+        main.setAttribute("interact", "true"); // Adding the main container interactivity back when the clear button is clicked.
+        newQuest.setAttribute("highlight", "false") // Removing the highligh on the new question button when the clear button is clicked.
+        clearBtn.setAttribute("highlight", "false") // Removing the highligh on the clear button when the clear button is clicked.
         const selectedOptions = document.querySelectorAll(".opt-container")
         selectedOptions.forEach((opt) => {
             opt.setAttribute("selected", false)
@@ -98,3 +110,7 @@ const create = (result) => {
         document.querySelector(".final").innerText = "?/10"
     })
 }
+// Event listener for close button in result shower.
+document.querySelector(".close-btn").addEventListener("click", () => {
+    document.querySelector(".result-container").setAttribute("show", "false");
+})
