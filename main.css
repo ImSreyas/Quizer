@@ -76,7 +76,8 @@ body {
 }
 
 .opt-container[selected=true] {
-    background-color: rgb(40, 155, 40);
+    /* background-color: rgb(40, 155, 40); */
+    border-color: white;
 }
 
 .opt-container[ans="yes"] {
