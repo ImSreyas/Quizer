@@ -56,7 +56,7 @@ body {
     pointer-events: none;
 }
 .main[interact="false"] *{
-    color: rgb(225, 225, 225);
+    color: rgb(187, 187, 187);
     /* color: white; */
 }
 
@@ -155,7 +155,7 @@ body {
     inset: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.92);
     display: none;
     justify-content: center;
     align-items: center;
@@ -169,8 +169,8 @@ body {
     border-radius: 1.1rem;
     padding: 1.3rem 2rem;
     width: min(75vw, 25rem);
-    box-shadow: 0 0 5rem rgb(45, 45, 45);
-    transform: translateY(-7.5vh);
+    /* box-shadow: 0 0 5rem rgb(45, 45, 45); */
+    transform: translateY(-5vh);
 }
 .result-container .final{
     text-align: center;
