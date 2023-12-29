@@ -191,7 +191,7 @@ body {
 .result-container .new-q{
     margin-block-start: .5rem;
 }
-.result-container .close-btn:hover{
+.result-container .close-btn:hover, .result-container .new-q:hover{
     transform: scale(1.015);
 }
 .result-container .close-btn:active{
