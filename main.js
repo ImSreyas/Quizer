@@ -1,11 +1,13 @@
 const main = document.querySelector(".main") // Selecting the main container.
 const newQuest = document.querySelector(".new") // Selecting the new question button.
 const clearBtn = document.querySelector(".clear") // Selecting the clear button.
+const resultContainer = document.querySelector(".result-container")
 // Function for FETCHING the data.
 const getData = async () => {
     main.setAttribute("interact", "true"); // Adding the main container interactivity back when new questions fetched.
     newQuest.setAttribute("highlight", "false") // Removing the highligh on the new question button when new questions fetched.
     clearBtn.setAttribute("highlight", "false") // Removing the highligh on the clear button when new questions fetched.
+    resultContainer.setAttribute("show", "false"); // if the result container is visible, then hiding it (when new questions button in result container is clicked)
     // Function to remove all event listeners of an element.
     function removeAllEventListeners(element) {
         const clone = element.cloneNode(true);
@@ -112,5 +114,5 @@ const create = (result) => {
 }
 // Event listener for close button in result shower.
 document.querySelector(".close-btn").addEventListener("click", () => {
-    document.querySelector(".result-container").setAttribute("show", "false");
+    resultContainer.setAttribute("show", "false");
 })
