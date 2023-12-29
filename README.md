@@ -1,8 +1,8 @@
-# Quizer 🧠
+<h1 align="center">Quizer 🧠</h1>
 
-Welcome to Quizer, the ultimate quiz application that challenges your knowledge and keeps you entertained! 🚀
+<p align="center">Welcome to Quizer, the ultimate quiz application that challenges your knowledge and keeps you entertained! 🚀</p>
 
-🌐 Visit the Web App: [Quizer](https://imsreyas.github.io/quizer/)
+<p align="center">🌐 Visit the Web App: <a href="https://imsreyas.github.io/quizer/">Quizer</a></p>
 
 ## Features ✨
 
