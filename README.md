@@ -2,7 +2,7 @@
 
 <p align="center">Welcome to Quizer, the ultimate quiz application that challenges your knowledge and keeps you entertained! 🚀</p>
 
-<p align="center">🌐 Visit the Web App: <a href="https://imsreyas.github.io/quizer/">Quizer</a></p>
+<p align="center">🌐 Visit the Web App: <a href="https://imsreyas.github.io/Quizer/">Quizer</a></p>
 
 ## Features ✨
 
