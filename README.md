@@ -24,20 +24,17 @@
 Here are some snapshots of Quizer in action:
 
 - Home
-![Home](url_to_screenshot_1)
-Caption for Screenshot 1
+<img alt="Home" src="./screenshots/pc/home.png" width="100%" />
 
 - selected
-![selected](url_to_screenshot_2)
-Caption for Screenshot 2
+<img alt="Home" src="./screenshots/pc/selected.png" width="100%" />
 
 - score
-![score](url_to_screenshot_3)
-Caption for Screenshot 3
+<img alt="Home" src="./screenshots/pc/score.png" width="100%" />
 
-- review 
-![score](url_to_screenshot_4)
-Caption for Screenshot 4
+- view answers 
+<img alt="Home" src="./screenshots/pc/review.png" width="100%" />
+
 
 ## Mobile Responsiveness 📱
 
@@ -45,6 +42,18 @@ Quizer is designed with mobile responsiveness in mind, ensuring a seamless and e
 
 Previews 
 ---
+<div align="center">
+  
+  <img alt="Home" src="./screenshots/mobile/home.png" width="300" />
+  
+  <img alt="Home" src="./screenshots/mobile/selected.png" width="300" />
+  <br>
+  <img alt="Home" src="./screenshots/mobile/score.png" width="300" />
+  
+  <img alt="Home" src="./screenshots/mobile/review.png" width="300" />
+  
+</div>
+
 
 ## Contributing 🤝
 
