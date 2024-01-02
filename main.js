@@ -9,11 +9,11 @@ const getData = async () => {
     clearBtn.setAttribute("highlight", "false") // Removing the highligh on the clear button when new questions fetched.
     resultContainer.setAttribute("show", "false"); // if the result container is visible, then hiding it (when new questions button in result container is clicked)
     // Function to remove all event listeners of an element.
-    function removeAllEventListeners(element) {
+    const removeAllEventListeners = (element) => {
         const clone = element.cloneNode(true);
         element.parentNode.replaceChild(clone, element);
     }
-    
+
     const myElement = document.querySelector('.submit'); // Selecting the submit button for removing all event listeners while calling the getData method.
     removeAllEventListeners(myElement); // Calling the remove all event listeners to remove all event listeners from the submit button element  
 
