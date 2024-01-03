@@ -49,7 +49,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    min-height: 32rem;
+    /* min-height: 32rem; */
     padding-block-end: 6.6rem;
 }
 .main[interact="false"]{
