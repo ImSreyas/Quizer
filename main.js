@@ -122,7 +122,7 @@ const tool = document.querySelector(".tool") // Selecting the tool container.
 const resizeLoader = () => {
     const toolBoxHeight = tool.clientHeight // Getting the height of the toolbox
     const mainTop = main.getBoundingClientRect().top // Getting the top bound of main element (element to top of the window).
-    main.style.minHeight = `calc(100vh - ${toolBoxHeight + mainTop }px - 1.5rem)` // Setting the min height to the main element, because the loader wrapper is inside the main container.
+    main.style.minHeight = `calc(100dvh - ${toolBoxHeight + mainTop }px - 1.5rem)` // Setting the min height to the main element, because the loader wrapper is inside the main container.
 }
 resizeLoader() // calling the resize function.
 window.addEventListener("resize", resizeLoader) // adding a resize event listener on document.
