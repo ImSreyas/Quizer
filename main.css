@@ -10,6 +10,8 @@ html {
     /* margin: 0;
     padding: 0; */
     color: white;
+    -webkit-tap-highlight-color: transparent;
+    -moz-appearance: none;
 }
 
 body {
