@@ -73,8 +73,8 @@ body {
   pointer-events: none;
 }
 .main[interact="false"] * {
-  color: rgb(187, 187, 187);
-  /* color: white; */
+  /* color: rgb(225, 225, 225); */
+  color: white;
 }
 
 .wrapper {
