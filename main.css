@@ -257,6 +257,23 @@ body {
   button.new {
     grid-column: 1 / span 2;
   }
+
+  /*
+  Make the 
+  new questions button - black &
+  submit button - white
+  in mobile screens
+  */
+
+  /* button.submit{
+    background-color: white;
+    color: black;
+  }
+  button.new{
+    background-color: black !important;
+    border: 1px solid rgb(40, 40, 40) !important;
+    color:white;
+  } */
   .tool button:hover {
     transform: scale(1.015);
   }
