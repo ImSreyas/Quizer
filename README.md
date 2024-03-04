@@ -26,13 +26,13 @@ Here are some snapshots of Quizer in action:
 - Home
 <img alt="Home" src="./screenshots/pc/home.png" width="100%" />
 
-- selected
+- Selected
 <img alt="Home" src="./screenshots/pc/selected.png" width="100%" />
 
-- score
+- Score
 <img alt="Home" src="./screenshots/pc/score.png" width="100%" />
 
-- view answers 
+- View answers 
 <img alt="Home" src="./screenshots/pc/review.png" width="100%" />
 
 
