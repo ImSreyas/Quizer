@@ -31,7 +31,7 @@ const getData = async () => {
         document.querySelector(".loader-wrapper").setAttribute("show", "false"); // Hiding the LOADER.
     }
 }
-getData() // initial calling of getData.
+getData() // initial calling of getData(fetching the data).
 
 // Function for adding question to the DOM.
 const create = (result) => {
@@ -70,7 +70,7 @@ const create = (result) => {
             })
         })
     })
-    // adding event listener for the SUBMIT button
+    // Adding event listener for the SUBMIT button
     document.querySelector(".submit").addEventListener("click", () => {
         const optionWrapper = document.querySelectorAll(".opt-wrapper")
         let score = 0; // Setting initial score.
@@ -79,6 +79,7 @@ const create = (result) => {
             opt.forEach((o) => {
                 if (o.getAttribute("selected") == "true") {
                     // Checking the SELECTED option is correct or not.
+                    console.log(o.innerHTML);
                     if (o.innerHTML == result[index].correct_answer) {
                         score++; // Incrementing the score by 1 if it is correct.
                     } else {
