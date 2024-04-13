@@ -2,6 +2,11 @@ const main = document.querySelector(".main") // Selecting the main container.
 const newQuest = document.querySelector(".new") // Selecting the new question button.
 const clearBtn = document.querySelector(".clear") // Selecting the clear button.
 const resultContainer = document.querySelector(".result-container")
+const amount = 10; // Number of questions fetched from the server (API).
+const category = {
+    computer: 18,
+    maths: 19,
+}
 // Function for FETCHING the data.
 const getData = async () => {
     main.setAttribute("interact", "true"); // Adding the main container interactivity back when new questions fetched.
@@ -20,7 +25,7 @@ const getData = async () => {
     document.querySelector(".main").innerHTML = "" // Making the main container empty, so then new questions come, old questions will be removed.
     document.querySelector(".loader-wrapper").setAttribute("show", "true"); // Making the LOADER visible
     try {
-        const response = await fetch('https://opentdb.com/api.php?amount=10') // Fetching the QUESTIONS
+        const response = await fetch(`https://opentdb.com/api.php?amount=${amount}&category=${category.computer}`) // Fetching the QUESTIONS
         const data = await response.json() // Converting the response to json object.
         const result = data.results // Getting the ACTUAL RESULT from the response
         create(result) // Calling the create method for adding All questions to the DOM
@@ -93,7 +98,7 @@ const create = (result) => {
             })
         })
         // setting FINAL SCORE
-        document.querySelector(".final").innerText = `${score}/10`
+        document.querySelector(".final").innerText = `${score}/${amount}`
         document.querySelector(".result-container").setAttribute("show", "true");
         main.setAttribute("interact", "false"); // making main container non interactable when it is submitted.
         newQuest.setAttribute("highlight", "true") // Highlighting the new question button when the container is non interactable.
@@ -110,7 +115,7 @@ const create = (result) => {
             opt.setAttribute("ans", "null")
         })
         // resetting the score to NULL when clear button is clicked
-        document.querySelector(".final").innerText = "?/10"
+        document.querySelector(".final").innerText = `?/${amount}`
     })
 }
 // Event listener for close button in result shower.
